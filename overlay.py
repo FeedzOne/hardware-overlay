@@ -109,11 +109,11 @@ def update_info():
     info_label.config(text=f'{cpu_name}\n{cpu_info}\n{temperature_info}\n_____________________________\n{gpu_info}\n_____________________________\n\n{ram_info}\n_____________________________\n{storage_info}')
 
     # Schedule the next update
-    root.after(100, update_info)  # Update every 1 second
+    root.after(250, update_info)  # Update every 250 miliseconds
 
 # Create the Tkinter window
 root = tk.Tk()
-root.title('CPU and GPU Information')
+root.title('Hardware Monitor')
 
 # Make the window slightly transparent (0.9 alpha)
 root.attributes('-alpha', 0.9)
